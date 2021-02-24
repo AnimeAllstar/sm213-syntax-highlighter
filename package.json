@@ -1,0 +1,25 @@
+{
+    "name": "sm-213-theme",
+    "displayName": "sm-213 theme",
+    "description": "Syntax highlighting for sm-213",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "sm213",
+            "aliases": ["SM213", "sm213"],
+            "extensions": [".s"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "sm213",
+            "scopeName": "source.s",
+            "path": "./syntaxes/sm213.tmLanguage.json"
+        }]
+    }
+}
