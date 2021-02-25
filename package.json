@@ -1,6 +1,6 @@
 {
-    "name": "sm-213-theme",
-    "displayName": "sm-213 theme",
+    "name": "sm-213-tokenizer",
+    "displayName": "sm-213 tokenizer",
     "description": "Syntax highlighting for sm-213",
     "version": "0.0.1",
     "engines": {

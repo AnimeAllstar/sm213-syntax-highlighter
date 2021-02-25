@@ -1,9 +1,13 @@
 # Change Log
 
-All notable changes to the "sm-213-theme" extension will be documented in this file.
+## [0.0.0] - 24-01-2021
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+- Generated base files using Yeoman
 
-## [Unreleased]
+## [0.0.1] - 25-02-2021
 
-- Initial release
+### Added
+- Regex expressions to define most sm213 patterns covered in class
+
+### Comments
+- Regex expressions need to be modified and tested to included more cases and to be more versatile
