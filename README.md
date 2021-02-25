@@ -1,6 +1,10 @@
 # SM213 Support
 
+> This project is being developed for the SM213 language used in CPSC 213, UBC
+
 This extension provides VS Code with the required grammar rules to appropraitely break your sm213 code into tokens. These tokens are used by VS Code to style your sm213 code accordingly. What does that mean? It means that regardless of the theme you use, VS Code will be able to know what colors to use where using the defined grammar.
+
+![alt text](preview.gif "preview animation")
 
 ## Installing
 
@@ -12,5 +16,3 @@ The extension will eventually be published on the VS Code marketplace, before th
 
 - Grammar rules need to be revised and further tested
 - Missing sm213 syntax not covered in class yet
-
-> This project is being developed for CPSC 213, UBC
