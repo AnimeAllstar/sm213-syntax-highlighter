@@ -2,19 +2,72 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "SM213",
 	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
-		}
+		{"include": "#keywords"},
+		{"include": "#comment"},
+		{"include": "#comment"},
+		{"include": "#constant"},
+		{"include": "#variable"},
+		{"include": "#entity"},
+		{"include": "#invalid"},
+		{"include": "#strings"}
 	],
 	"repository": {
 		"keywords": {
-			"patterns": [{
-				"name": "keyword.control.sm213",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
+			"patterns": [
+				{
+					"name": "keyword.other.sm213",
+					"match": "\\b(st|ld|gpc)\\b"
+				},
+				{
+					"name": "keyword.control.sm213",
+					"match": "\\b(br|beq|bgt|j)\\b"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.number-sign.sm213",
+					"begin": "#",
+					"end": ".*"
+				}
+			]
+		},
+		"constant": {
+			"patterns": [
+				{
+					"name": "constant.numeric.sm213",
+					"match": "[0-9a-fA-F]+"
+				}
+			]
+		},
+		"variable": {
+			"patterns": [
+				{
+					"name": "variable.other.sm213",
+					"match": "\\$[0-9a-f]"
+				}
+			]
+		},
+		"entity": {
+			"patterns": [
+				{
+					"name": "entity.name.function.sm213",
+					"match": "\\b(mov|add|and|inc|inca|dec|deca|not|shl|shr)\\b"
+				},
+				{
+					"name": "entity.name.type.sm213",
+					"match": "r[0-7]|.long|.pos"
+				}
+			]
+		},
+		"invalid": {
+			"patterns": [
+				{
+					"name": "invalid.sm213",
+					"match": "halt"
+				}
+			]
 		},
 		"strings": {
 			"name": "string.quoted.double.sm213",
