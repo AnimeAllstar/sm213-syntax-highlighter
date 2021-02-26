@@ -2,25 +2,35 @@
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
 	"name": "SM213",
 	"patterns": [
-		{"include": "#keywords"},
-		{"include": "#comment"},
-		{"include": "#comment"},
-		{"include": "#constant"},
-		{"include": "#variable"},
-		{"include": "#entity"},
-		{"include": "#invalid"},
-		{"include": "#strings"}
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#constant"
+		},
+		{
+			"include": "#variable"
+		},
+		{
+			"include": "#entity"
+		},
+		{
+			"include": "#invalid"
+		}
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [
 				{
 					"name": "keyword.other.sm213",
-					"match": "\\b(st|ld|gpc)\\b"
+					"match": "\\b(st|ld)\\s"
 				},
 				{
 					"name": "keyword.control.sm213",
-					"match": "\\b(br|beq|bgt|j)\\b"
+					"match": "\\b(br|beq|bgt|j|gpc)\\s"
 				}
 			]
 		},
@@ -36,16 +46,12 @@
 		"constant": {
 			"patterns": [
 				{
-					"name": "constant.numeric.sm213",
-					"match": "[0-9a-fA-F]+"
-				}
-			]
-		},
-		"variable": {
-			"patterns": [
+					"name": "constant.numeric.hexadecimal.sm213",
+					"match": "\\$?0[xX][0-9a-fA-F]+"
+				},
 				{
-					"name": "variable.other.sm213",
-					"match": "\\$[0-9a-f]"
+					"name": "constant.numeric.decimal.sm213",
+					"match": "\\b\\$?[0-9]+\\b"
 				}
 			]
 		},
@@ -57,26 +63,27 @@
 				},
 				{
 					"name": "entity.name.type.sm213",
-					"match": "r[0-7]|.long|.pos"
+					"match": "\\br[0-7]|\\.(long|pos)\\s"
 				}
+			]
+		},
+		"variable": {
+			"patterns": [
+				{
+					"name": "variable.other.sm213",
+					"match": "\\$\\s*[0-9a-zA-Z]+"
+				},
+				{
+                    "name": "variable.other.sm213",
+                    "match": "\\b\\w+\\s?*:"
+                }
 			]
 		},
 		"invalid": {
 			"patterns": [
 				{
 					"name": "invalid.sm213",
-					"match": "halt"
-				}
-			]
-		},
-		"strings": {
-			"name": "string.quoted.double.sm213",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.sm213",
-					"match": "\\\\."
+					"match": "\\b(halt|nop)\\b"
 				}
 			]
 		}
