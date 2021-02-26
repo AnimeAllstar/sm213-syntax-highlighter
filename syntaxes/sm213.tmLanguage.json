@@ -1,92 +1,92 @@
 {
-	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "SM213",
-	"patterns": [
-		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#comment"
-		},
-		{
-			"include": "#constant"
-		},
-		{
-			"include": "#variable"
-		},
-		{
-			"include": "#entity"
-		},
-		{
-			"include": "#invalid"
-		}
-	],
-	"repository": {
-		"keywords": {
-			"patterns": [
-				{
-					"name": "keyword.other.sm213",
-					"match": "\\b(st|ld)\\s"
-				},
-				{
-					"name": "keyword.control.sm213",
-					"match": "\\b(br|beq|bgt|j|gpc)\\s"
-				}
-			]
-		},
-		"comment": {
-			"patterns": [
-				{
-					"name": "comment.line.number-sign.sm213",
-					"begin": "#",
-					"end": ".*"
-				}
-			]
-		},
-		"constant": {
-			"patterns": [
-				{
-					"name": "constant.numeric.hexadecimal.sm213",
-					"match": "\\$?0[xX][0-9a-fA-F]+"
-				},
-				{
-					"name": "constant.numeric.decimal.sm213",
-					"match": "\\b\\$?[0-9]+\\b"
-				}
-			]
-		},
-		"entity": {
-			"patterns": [
-				{
-					"name": "entity.name.function.sm213",
-					"match": "\\b(mov|add|and|inc|inca|dec|deca|not|shl|shr)\\b"
-				},
-				{
-					"name": "entity.name.type.sm213",
-					"match": "\\br[0-7]|\\.(long|pos)\\s"
-				}
-			]
-		},
-		"variable": {
-			"patterns": [
-				{
-					"name": "variable.other.sm213",
-					"match": "\\$\\s*[0-9a-zA-Z]+"
-				},
-				{
-                    "name": "variable.other.sm213",
-                    "match": "\\b\\w+\\s?*:"
-                }
-			]
-		},
-		"invalid": {
-			"patterns": [
-				{
-					"name": "invalid.sm213",
-					"match": "\\b(halt|nop)\\b"
-				}
-			]
-		}
-	},
-	"scopeName": "source.s"
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "SM213",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#constant"
+    },
+    {
+      "include": "#variable"
+    },
+    {
+      "include": "#entity"
+    },
+    {
+      "include": "#invalid"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.other.sm213",
+          "match": "\\b(st|ld)\\s"
+        },
+        {
+          "name": "keyword.control.sm213",
+          "match": "\\b(br|beq|bgt|j|gpc)\\s"
+        }
+      ]
+    },
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment.line.number-sign.sm213",
+          "begin": "#",
+          "end": ".*"
+        }
+      ]
+    },
+    "constant": {
+      "patterns": [
+        {
+          "name": "constant.numeric.hexadecimal.sm213",
+          "match": "\\$?0[xX][0-9a-fA-F]+"
+        },
+        {
+          "name": "constant.numeric.decimal.sm213",
+          "match": "\\b\\$?[0-9]+\\b"
+        }
+      ]
+    },
+    "entity": {
+      "patterns": [
+        {
+          "name": "entity.name.function.sm213",
+          "match": "\\b(mov|add|and|inc|inca|dec|deca|not|shl|shr)\\b"
+        },
+        {
+          "name": "entity.name.type.sm213",
+          "match": "\\br[0-7]|\\.(long|pos)\\s"
+        }
+      ]
+    },
+    "variable": {
+      "patterns": [
+        {
+          "name": "variable.other.sm213",
+          "match": "\\$\\s*[0-9a-zA-Z]+"
+        },
+        {
+          "name": "variable.other.sm213",
+          "match": "\\b\\w+\\s?*:"
+        }
+      ]
+    },
+    "invalid": {
+      "patterns": [
+        {
+          "name": "invalid.sm213",
+          "match": "\\b(halt|nop)\\b"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.s"
 }
