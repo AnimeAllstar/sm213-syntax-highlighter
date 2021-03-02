@@ -1,9 +1,14 @@
 {
     "name": "sm213-syntax-highlighter",
     "displayName": "SM213 Syntax Highlighter",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "AsadDhorajiwala",
     "description": "Syntax highlighting for SM213",
+    "keywords": [
+        "sm213",
+        "highlight",
+        "coloring"
+    ],
     "author": {
         "name": "Asad Dhorajiwala"
       },
