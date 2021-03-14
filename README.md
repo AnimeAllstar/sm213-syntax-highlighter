@@ -8,6 +8,10 @@ This extension provides VS Code with the required grammar rules to break your sm
 
 ## Installation and Usage
 
-You can download the extension from the VS Code marketplace [here](https://marketplace.visualstudio.com/items?itemName=AsadDhorajiwala.sm213-syntax-highlighter)
+You can download the extension from the VS Code marketplace by clicking [here](https://marketplace.visualstudio.com/items?itemName=AsadDhorajiwala.sm213-syntax-highlighter)
 
- When you open a `.s` file, VS Code should automatically detect and select the extension unless you have another extension installed for assembly files. In that case, you would have to change the [language mode](https://code.visualstudio.com/docs/languages/overview) by selecting SM213.
+When you open a `.s` file, VS Code should automatically detect and select the extension unless you have another extension installed for assembly files. In that case, you would have to change the [language mode](https://code.visualstudio.com/docs/languages/overview) by selecting SM213.
+
+## How to Edit
+
+If you want to make changes to the existing grammar, you can do so by editing `./syntaxes/sm213.tmLanguage.json`

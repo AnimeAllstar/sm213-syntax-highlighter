@@ -26,11 +26,11 @@
       "patterns": [
         {
           "name": "keyword.other.sm213",
-          "match": "^\\s*?(ld|st)\\s"
+          "match": "\\s*(ld|st)\\s"
         },
         {
           "name": "keyword.control.sm213",
-          "match": "^\\s*?(br|beq|bgt|j|gpc)\\s"
+          "match": "\\s*(br|beq|bgt|j|gpc|sys)\\s"
         }
       ]
     },
@@ -59,7 +59,7 @@
       "patterns": [
         {
           "name": "entity.name.function.sm213",
-          "match": "^\\s*?(mov|add|and|inc|inca|dec|deca|not|shl|shr)\\s"
+          "match": "\\s*(mov|add|and|inc|inca|dec|deca|not|shl|shr)\\s"
         },
         {
           "name": "entity.name.type.sm213",
@@ -75,7 +75,7 @@
         },
         {
           "name": "variable.other.sm213",
-          "match": "^\\s*?\\b\\w+\\s?*:"
+          "match": "\\s*\\b\\w+\\s?*:"
         }
       ]
     },
@@ -83,7 +83,7 @@
       "patterns": [
         {
           "name": "invalid.sm213",
-          "match": "^\\s*?(halt|nop)\\s?*"
+          "match": "\\s*(halt|nop)\\s?*"
         }
       ]
     }
